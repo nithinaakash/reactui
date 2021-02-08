@@ -1,0 +1,17 @@
+.searchbar {
+  min-width: 25vw;
+  margin-right: 5vw;
+}
+
+input[type="search"] {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  box-shadow: 3px 3px 10px 1px #ccc;
+}
+
+input[type="search"]:focus {
+  box-shadow: 3px 3px 20px 1px #ccc;
+}
