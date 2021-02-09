@@ -26,10 +26,14 @@ export const App = () => {
 
   return (
     <div className="App">
-      <ModalForm modalIsOpen={modalIsOpen} setModal={setModalIsOpen} />
+      <ModalForm
+        modalIsOpen={modalIsOpen}
+        setModal={setModalIsOpen}
+        addCard={addCard}
+      />
       <header className="header">
         <Search />
-        <AddNotes addCard={addCard} setModal={setModalIsOpen} />
+        <AddNotes setModal={setModalIsOpen} />
       </header>
       <main className="main">{cards}</main>
     </div>
