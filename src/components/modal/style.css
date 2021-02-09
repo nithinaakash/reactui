@@ -1,0 +1,23 @@
+.modal {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal input,
+.modal textarea,
+.modal button {
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.modal textarea {
+  height: 50vh;
+}
+
+.cancelBtn {
+  background: red;
+}
+
+.cancelBtn:hover {
+  background-color: orangered;
+}

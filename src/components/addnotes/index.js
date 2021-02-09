@@ -1,8 +1,16 @@
 import "./style.css";
 
-export const AddNotes = ({ addCard }) => {
+import { useState } from "react";
+
+export const AddNotes = ({ addCard, setModal }) => {
+
   const handleClick = (e) => {
     e.preventDefault();
+
+    // open modal
+    setModal(true);
+    // get values from modal
+    // pass here
     addCard("testy", "tasty");
   };
 

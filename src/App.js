@@ -5,9 +5,11 @@ import { useEffect, useState } from "react";
 import { Search } from "./components/search";
 import { AddNotes } from "./components/addnotes";
 import { Card } from "./components/card";
+import { ModalForm } from "./components/modal";
 
 export const App = () => {
   const [cards, setCards] = useState([]);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const addCard = (title = "", content = "") => {
     setCards([
@@ -24,9 +26,10 @@ export const App = () => {
 
   return (
     <div className="App">
+      <ModalForm modalIsOpen={modalIsOpen} setModal={setModalIsOpen} />
       <header className="header">
         <Search />
-        <AddNotes addCard={addCard} />
+        <AddNotes addCard={addCard} setModal={setModalIsOpen} />
       </header>
       <main className="main">{cards}</main>
     </div>
